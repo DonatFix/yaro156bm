@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!-- saved from url=(0066)https://livechat.messagebird.com/index.html?disableAnalytics=false -->
+<html style="--color-main:#e21959; --color-secondary:#0089FF; --color-avatar-background:#e21959; --bubble-color:#ffffff;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+      <title>Live chat widget</title>
+      <link href="./fonts.css" rel="preload" as="style">
+      <link href="./fonts.css" rel="stylesheet" as="style">
+      <link href="./index-nomodule-ad77a074.css" rel="stylesheet">
+      <script src="./js" async=""></script></head>
+      <body>
+      <div id="app"><div class="styles_wrapper__d7uG7"><div id="chat-widget-container" class="
+  styles_widget__2g5UX
+   
+  
+  
+  styles_closedWithOutPops__2iD63
+  "><div><div></div></div></div><div data-cy="start-button" class="styles_wrapper__2J-67 " role="button" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="#FFF" fill-rule="evenodd" d="M0 9h13.6c1.326 0 2.4-.895 2.4-2H0V4c0-2.21 1.79-4 4-4h24c2.21 0 4 1.79 4 4v17c0 2.21-1.79 4-4 4h-5v4.282c0 2.195-2.55 3.482-4.404 2.223L9 25H4c-2.21 0-4-1.79-4-4v-3h9.75c1.243 0 2.25-.895 2.25-2H0V9z"></path></svg></div></div></div>
+
+      <script>
+        
+        function sendEventToPushProm(v) {
+          if (false) {
+            return;
+          }
+        
+          if ('sendBeacon' in window.navigator) {
+            navigator.sendBeacon("https://pushpromjs.messagebird.com/measure", JSON.stringify(v));
+          } else {
+            var server = 'https://pushpromjs.messagebird.com/measure';
+            var http = new XMLHttpRequest();
+        
+            http.open('POST', server + '/measure');
+            http.setRequestHeader('Content-type', 'text/plain');
+            http.setRequestHeader('Accept', 'text/plain');
+            http.send(JSON.stringify(v));
+          }
+        }
+      
+        
+        // If the bundle fails to load we send metrics to prometheus from the client
+        function errorHandler() {
+          sendEventToPushProm({
+            type: 'counter',
+            name: 'js_livechatwidget_bundle_loading_failure',
+            method: 'inc',
+          });
+        }
+        
+        // If the bundle succeeds to load we send metrics to prometheus from the client
+        function onLoad() {
+          sendEventToPushProm({
+            type: 'counter',
+            name: 'js_livechatwidget_bundle_loading_success',
+            method: 'inc',
+          });
+        }
+
+        function onLoadNoModule() {
+          // load systemjs and then the applicaiton once system is loaded
+          onLoad();
+          System.import('/assets/p/index-nomodule-ad77a074.jspreact-vendor-chunk-nomodule-31501d68.jsfirebase-chunk-nomodule-1201a55d.jscorejs-chunk-nomodule-5dc4a893.jslingui-chunk-nomodule-7296b797.jsphoneNumber-chunk-nomodule-b23a85e2.jsemojiMart-chunk-nomodule-14a1c6f2.jsindex-chunk-nomodule-5ae7a1ed.jsua-parser-chunk-nomodule-0e1ba87f.jsmessages-chunk-nomodule-20d41c05.jsmessages-chunk-nomodule-f4ef25ce.jsmessages-chunk-nomodule-d73fb1ae.jsmessages-chunk-nomodule-22fd38dc.jsmessages-chunk-nomodule-f412ee1d.jsmessages-chunk-nomodule-ee87a39f.jsmessages-chunk-nomodule-0c3ac7e7.jsmessages-chunk-nomodule-562dc2a4.jsmessages-chunk-nomodule-7f01c17c.jsmessages-chunk-nomodule-6afeac2c.jsmessages-chunk-nomodule-ffd4977c.jsmessages-chunk-nomodule-66e34dd8.jsmessages-chunk-nomodule-bd776240.jsmessages-chunk-nomodule-bb18f972.jsmessages-chunk-nomodule-39d54168.jsmessages-chunk-nomodule-74462a95.jsindex-chunk-nomodule-f56f242f.jsLazyQRCode-chunk-nomodule-cf0a4033.jsFlags-chunk-nomodule-645d8f6c.js');
+        }
+
+        sendEventToPushProm({
+          type: 'counter',
+          name: 'js_livechatwidget_bundle_loading_attempt',
+          method: 'inc',
+        });
+
+        sendEventToPushProm({
+          type: 'counter',
+          name: 'js_livechatwidget_app_version',
+          method: 'inc',
+          labels: {
+            version: '5',
+          }
+        });
+      </script>
+
+      
+      <script type="module" onload="onLoad()" onerror="errorHandler()" src="./modern-6c75634c.js.download"></script>
+
+      <script nomodule="" src="./polyfill.min.js.download"></script>
+      <script nomodule="" onload="onLoadNoModule()" onerror="errorHandler()" src="./s.min.js.download"></script>
+      
+    
+  </body></html>

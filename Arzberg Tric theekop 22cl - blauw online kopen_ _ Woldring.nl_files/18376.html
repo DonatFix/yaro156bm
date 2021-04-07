@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0058)https://beoordelingen.feedbackcompany.nl/widget/18376.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="robots" content="noindex, follow">
+<title>Samenvoordeel review widget</title>
+<style type="text/css">
+Body	{margin:0px 0px 0px 0px;padding:0px 0px 0px 0px; background-color: #ffffff;}
+a {outline: none;}
+a img {border:none;}
+#main_div	{float: left; clear: both; margin:0px 0px 0px 0px; padding:0px 0px 0px 0px; width: 200px; height: auto; background-color: #aaaaaa;}
+#main_div_inner	{float: left; clear: both; margin:1px; padding:0px 0px 0px 0px; width: 198px; height: auto; background-color: #ffffff;}
+#title	{float: left; clear: both; width: 198px; height:31px; padding: 13px 0 0 0; overflow: hidden; color:#000000; font-weight: bold; font-family: Arial, Arial, Helvetica, sans-serif; font-size:16px; background-color: #ffffff; text-align:center; border-bottom: solid 1px #aaaaaa;}
+#rating_div	{float: left; clear: both; width: 198px; height:30px; padding: 4px 0 0 0; overflow: hidden; position: relative;}
+#stars_div	{float: left; clear: both; width: 105px; height:30px; overflow: hidden; position: absolute; top: 10px; left:50%; margin:0 0 0 -86px;}
+#stars_div DIV {float: left;}
+#avgrating	{float: left; clear: both; width: 68px; height:30px; overflow: hidden; position: absolute; top: 11px; left:50%; margin:0 0 0 26px;}
+#avgrating .innertxt1	{color: #000000; font-family: Arial, Arial, Helvetica, sans-serif; font-size: 11pt; font-weight: bold;}
+#avgrating .innertxt1 .innertxt2	{color: #cccccc; font-family: Arial, Arial, Helvetica, sans-serif; font-size: 11pt; font-weight: bold;}
+#bottom_div	{float: left; clear: both; width: 198px; padding: 0; text-align: right; height: 21px;}
+#bottom_div A	{margin: 0 16px 0 0;}
+</style>
+<script language="Javascript" type="text/javascript" src="./jquery-1.4.2.min.js.download"></script>
+<script language="JavaScript" type="text/javascript">
+var wasclicked=0;
+function unsetGovisit(){
+wasclicked=1;
+}
+function govisit(){
+if(wasclicked==0){
+window.open('https://www.feedbackcompany.com/nl-nl/reviews/cookinglife%2dnl/');
+}
+}
+function setRetinaImages(){
+// Set pixelRatio to 1 if the browser doesn't offer it up.
+var pixelRatio = !!window.devicePixelRatio ? window.devicePixelRatio : 1;
+// have already loaded, we'll jump in as soon as possible.
+if (pixelRatio > 1) {
+jQuery('img.retina').each(function() {
+// Very naive replacement that assumes no dots in file names.
+thesrc = jQuery(this).attr('src');
+if(thesrc.indexOf("_2x.png") < 0){
+thesrc = thesrc.replace(".png","_2x.png");
+}
+jQuery(this).attr('width', jQuery(this).width());
+jQuery(this).attr('height', jQuery(this).height());
+jQuery(this).attr('src', thesrc);
+});
+}
+}
+//pager button handler for reviews page
+jQuery(document).ready(function(){
+window.setTimeout(setRetinaImages, 1000);
+});
+</script>
+</head>
+<body>
+<div id="main_div">
+<div id="main_div_inner" onclick="govisit()" style="cursor:pointer;*cursor:hand;">
+<div id="title">Klantbeoordelingen</div>
+<div id="rating_div">
+<div id="stars_div">
+<div><img src="./star_full.png" class="retina" alt="" width="20" height="20"></div>
+<div><img src="./star_full.png" class="retina" alt="" width="20" height="20"></div>
+<div><img src="./star_full.png" class="retina" alt="" width="20" height="20"></div>
+<div><img src="./star_full.png" class="retina" alt="" width="20" height="20"></div>
+<div><img src="./star_half.png" class="retina" alt="" width="20" height="20"></div>
+</div>
+<div id="avgrating"><span class="innertxt1">(9.2/<span class="innertxt2">10</span>)</span></div>
+</div>
+<div id="bottom_div"><a href="https://www.feedbackcompany.com/nl-nl/reviews/cookinglife-nl/" onclick="unsetGovisit()" target="_blank"><img src="./tfclogo_footer_multi_bw.png" border="0" alt="" width="140" height="17" id="footerimg"></a></div>
+</div>
+</div>
+
+
+</body></html>
